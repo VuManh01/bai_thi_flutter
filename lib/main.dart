@@ -216,7 +216,7 @@ class _OrderPageState extends State<OrderPage> {
 
             Container(
                 width: double.infinity,
-                margin: EdgeInsets.only(bottom: 10),
+                margin: EdgeInsets.only(bottom: 20),
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   color: Colors.orange,
@@ -224,7 +224,7 @@ class _OrderPageState extends State<OrderPage> {
                 )
                 ,child: Center(
                 child: Text(
-                    'Address: 123 Main Street, Example City',
+                    'So 8, Ton That Thuyet, Cau Giay, Ha Noi',
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
