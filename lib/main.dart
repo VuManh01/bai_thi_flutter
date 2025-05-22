@@ -155,7 +155,7 @@ class _OrderPageState extends State<OrderPage> {
               ],
             ),
             Align(
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.centerRight,
               child: ElevatedButton(
                 onPressed: _addOrder,
                 child: Text('Add Item to Cart'),
@@ -177,7 +177,7 @@ class _OrderPageState extends State<OrderPage> {
                   columns: const [
                     DataColumn(label: Text('Item')),
                     DataColumn(label: Text('Item Name')),
-                    DataColumn(label: Text('Qty')),
+                    DataColumn(label: Text('Quantity')),
                     DataColumn(label: Text('Price')),
                     DataColumn(label: Text('Currency')),
                     DataColumn(label: Text('Action')),
@@ -213,10 +213,28 @@ class _OrderPageState extends State<OrderPage> {
               ),
             ),
             SizedBox(height: 16),
-            Text('Address: 123 Main Street, Example City'),
-          ],
+
+            Container(
+                width: double.infinity,
+                margin: EdgeInsets.only(bottom: 10),
+                padding: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                  color: Colors.orange,
+                  borderRadius: BorderRadius.circular(8),
+                )
+                ,child: Center(
+                child: Text(
+                    'Address: 123 Main Street, Example City',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    }
   }
-}
